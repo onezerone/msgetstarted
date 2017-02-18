@@ -207,12 +207,16 @@ var initServer = ()=> {
     var app = express();
     var express = require('express');
     var app = express();
+	app.set('port', (process.env.PORT || 5000));
     app.use('/', express.static(__dirname));
-    app.listen(globs.PORT_LISTEN_DIST, function () {
-        console.log('Now opening your browser to http://localhost:8085/msgetstarted.html'.yellow);
+
+    app.listen(app.get('port'), function () {
+        console.log('Node app is running on port', app.get('port'));
     });
-    opn('http://localhost:8085/msgetstarted.html');
+    app.get('/', function(request, response) {
+		response.redirect('msgetstarted.html');
+	});
 }
 
-init();
+initServer();
 
