@@ -267,15 +267,6 @@ define(['underscore', 'jquery', 'backbone', 'text', 'AppAuth', 'AppEntryFaderVie
             },
 
             _initBranding: function () {
-                if (BB.CONSTS.RESELLER == 1) {
-                    $(Elements.DEFAULT_LOGO).fadeIn();
-                    return;
-                }
-                $(Elements.DEFAULT_LOGO).remove();
-                var logoLink = 'https://galaxy.signage.me/Resources/Resellers/' + BB.CONSTS.RESELLER + '/Logo.png';
-                $(Elements.ENTERPRISE_LOGO).find('img').attr('src', logoLink);
-                $(Elements.ENTERPRISE_LOGO).fadeIn();
-                $('#enterpriseName').text(BB.globs['COMPANY']);
             },
 
             /**
