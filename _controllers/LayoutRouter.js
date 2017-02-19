@@ -272,7 +272,7 @@ define(['underscore', 'jquery', 'backbone', 'text', 'AppAuth', 'AppEntryFaderVie
                     return;
                 }
                 $(Elements.DEFAULT_LOGO).remove();
-                var logoLink = 'http://galaxy.signage.me/Resources/Resellers/' + BB.CONSTS.RESELLER + '/Logo.jpg';
+                var logoLink = 'http://galaxy.signage.me/Resources/Resellers/' + BB.CONSTS.RESELLER + '/Logo.png';
                 $(Elements.ENTERPRISE_LOGO).find('img').attr('src', logoLink);
                 $(Elements.ENTERPRISE_LOGO).fadeIn();
                 $('#enterpriseName').text(BB.globs['COMPANY']);
