@@ -10,7 +10,7 @@ define(['underscore', 'jquery', 'backbone', 'bootstrap', 'backbone.controller', 
 
         // app init
         initialize: function () {
-            console.log('msGetStarted version 2.60');
+            console.log('msGetStarted version 2.50');
             window.BB = Backbone;
             BB.globs = {};
             BB.SERVICES = {};
@@ -42,12 +42,12 @@ define(['underscore', 'jquery', 'backbone', 'bootstrap', 'backbone.controller', 
             window.pepper = BB.Pepper;
 
             // START_PROTOCOL
-            window.g_protocol = 'https://';
-            // END_PROTOCOL
+			 window.g_protocol =  'https://' 
+			// END_PROTOCOL
 
             // START_MASTER
-            window.g_masterDomain = 'galaxy.signage.me';
-            // END_MASTER
+			 window.g_masterDomain =  'galaxy.signage.me' 
+			// END_MASTER
 
             self.m_buinessModel = new BusinessModel();
 
@@ -60,28 +60,28 @@ define(['underscore', 'jquery', 'backbone', 'bootstrap', 'backbone.controller', 
             require(['LayoutRouter'], function (LayoutRouter) {
 
                 // START_REDIRECT
-                BB.CONSTS.REDIRECT = 'digitalsignage.com';
-                // END_REDIRECT
+				 BB.CONSTS.REDIRECT = 'https://ds.onezerone.com' 
+				// END_REDIRECT
 
                 // START_RESELLER
-                BB.CONSTS.RESELLER = 1;
-                // END_RESELLER
+				 BB.CONSTS.RESELLER = '447473' 
+				// END_RESELLER
 
                 // START_ERI
-                BB.globs['ERI'] = '';
-                // END_ERI
+				 BB.globs['ERI'] = 'f7bee07a7e79c8f1d7951b4d24de4713c22f130b59bb677e' 
+				// END_ERI
 
                 // START_CLOUD
-                BB.globs['CLOUD'] = true;
-                // END_CLOUD
+				 BB.globs['CLOUD'] = true 
+				// END_CLOUD
 
                 // START_CHAT
-                BB.globs['CHAT'] = 'http://www.digitalsignage.com/_html/live_chat.html';
-                // END_CHAT
+				 BB.globs['CHAT'] = 'http://messenger.providesupport.com/messenger/mediasignage.html' 
+				// END_CHAT
 
                 // START_COMPANY
-                BB.globs['COMPANY'] = 'DigitalSignage.com';
-                // END_COMPANY
+				 BB.globs['COMPANY'] = 'onezerOne' 
+				// END_COMPANY
 
                 var LayoutRouter = new LayoutRouter();
                 Backbone.history.start({root: '/msgetstarted/'});
